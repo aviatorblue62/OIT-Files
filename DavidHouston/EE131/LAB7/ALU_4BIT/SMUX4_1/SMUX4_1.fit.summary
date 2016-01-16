@@ -1,0 +1,9 @@
+Fitter Status : Successful - Thu Feb 20 08:43:55 2014
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : SMUX4_1
+Top-level Entity Name : SMUX4_1
+Family : MAX7000S
+Device : EPM7128SLC84-15
+Timing Models : Final
+Total macrocells : 1 / 128 ( < 1 % )
+Total pins : 12 / 68 ( 18 % )

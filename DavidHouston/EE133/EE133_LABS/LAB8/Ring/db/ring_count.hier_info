@@ -1,0 +1,25 @@
+|ring_count
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+rst => Q[0]~reg0.ACLR
+rst => Q[1]~reg0.ACLR
+rst => Q[2]~reg0.ACLR
+rst => Q[3]~reg0.PRESET
+rr => always0.IN0
+rr => Q.OUTPUTSELECT
+rr => Q.OUTPUTSELECT
+rr => Q.OUTPUTSELECT
+rr => Q.OUTPUTSELECT
+rl => always0.IN1
+rl => Q.OUTPUTSELECT
+rl => Q.OUTPUTSELECT
+rl => Q.OUTPUTSELECT
+rl => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

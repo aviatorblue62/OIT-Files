@@ -1,0 +1,18 @@
+|Prob2
+a[0] => comb.IN0
+a[1] => valid.OUTPUTSELECT
+a[1] => r.DATAA
+a[2] => r.OUTPUTSELECT
+a[2] => valid.OUTPUTSELECT
+a[2] => r.DATAA
+a[3] => r.OUTPUTSELECT
+a[3] => r.OUTPUTSELECT
+a[3] => valid.OUTPUTSELECT
+ena => r.OUTPUTSELECT
+ena => r.OUTPUTSELECT
+ena => valid.OUTPUTSELECT
+r[0] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= r.DB_MAX_OUTPUT_PORT_TYPE
+valid <= valid.DB_MAX_OUTPUT_PORT_TYPE
+
+

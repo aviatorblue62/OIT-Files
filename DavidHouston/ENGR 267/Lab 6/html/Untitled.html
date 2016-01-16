@@ -1,0 +1,292 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Lab 6</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-05-13"><meta name="DC.source" content="Untitled.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1><b>Lab 6</b></h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Task #1</a></li><li><a href="#2">Task #2</a></li></ul></div><h2>Task #1<a name="1"></a></h2><pre class="codeinput"><span class="comment">% Create a 9x9 Multiplication table using for loops</span>
+clear <span class="string">all</span>
+format <span class="string">SHORT</span>
+
+<span class="keyword">for</span> n = 1:9
+    <span class="keyword">for</span> k = 1:9
+        <span class="keyword">for</span> u = 1:9
+        table(n,k,u) = n*k*u;
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+table
+</pre><pre class="codeoutput">
+table(:,:,1) =
+
+     1     2     3     4     5     6     7     8     9
+     2     4     6     8    10    12    14    16    18
+     3     6     9    12    15    18    21    24    27
+     4     8    12    16    20    24    28    32    36
+     5    10    15    20    25    30    35    40    45
+     6    12    18    24    30    36    42    48    54
+     7    14    21    28    35    42    49    56    63
+     8    16    24    32    40    48    56    64    72
+     9    18    27    36    45    54    63    72    81
+
+
+table(:,:,2) =
+
+     2     4     6     8    10    12    14    16    18
+     4     8    12    16    20    24    28    32    36
+     6    12    18    24    30    36    42    48    54
+     8    16    24    32    40    48    56    64    72
+    10    20    30    40    50    60    70    80    90
+    12    24    36    48    60    72    84    96   108
+    14    28    42    56    70    84    98   112   126
+    16    32    48    64    80    96   112   128   144
+    18    36    54    72    90   108   126   144   162
+
+
+table(:,:,3) =
+
+     3     6     9    12    15    18    21    24    27
+     6    12    18    24    30    36    42    48    54
+     9    18    27    36    45    54    63    72    81
+    12    24    36    48    60    72    84    96   108
+    15    30    45    60    75    90   105   120   135
+    18    36    54    72    90   108   126   144   162
+    21    42    63    84   105   126   147   168   189
+    24    48    72    96   120   144   168   192   216
+    27    54    81   108   135   162   189   216   243
+
+
+table(:,:,4) =
+
+     4     8    12    16    20    24    28    32    36
+     8    16    24    32    40    48    56    64    72
+    12    24    36    48    60    72    84    96   108
+    16    32    48    64    80    96   112   128   144
+    20    40    60    80   100   120   140   160   180
+    24    48    72    96   120   144   168   192   216
+    28    56    84   112   140   168   196   224   252
+    32    64    96   128   160   192   224   256   288
+    36    72   108   144   180   216   252   288   324
+
+
+table(:,:,5) =
+
+     5    10    15    20    25    30    35    40    45
+    10    20    30    40    50    60    70    80    90
+    15    30    45    60    75    90   105   120   135
+    20    40    60    80   100   120   140   160   180
+    25    50    75   100   125   150   175   200   225
+    30    60    90   120   150   180   210   240   270
+    35    70   105   140   175   210   245   280   315
+    40    80   120   160   200   240   280   320   360
+    45    90   135   180   225   270   315   360   405
+
+
+table(:,:,6) =
+
+     6    12    18    24    30    36    42    48    54
+    12    24    36    48    60    72    84    96   108
+    18    36    54    72    90   108   126   144   162
+    24    48    72    96   120   144   168   192   216
+    30    60    90   120   150   180   210   240   270
+    36    72   108   144   180   216   252   288   324
+    42    84   126   168   210   252   294   336   378
+    48    96   144   192   240   288   336   384   432
+    54   108   162   216   270   324   378   432   486
+
+
+table(:,:,7) =
+
+     7    14    21    28    35    42    49    56    63
+    14    28    42    56    70    84    98   112   126
+    21    42    63    84   105   126   147   168   189
+    28    56    84   112   140   168   196   224   252
+    35    70   105   140   175   210   245   280   315
+    42    84   126   168   210   252   294   336   378
+    49    98   147   196   245   294   343   392   441
+    56   112   168   224   280   336   392   448   504
+    63   126   189   252   315   378   441   504   567
+
+
+table(:,:,8) =
+
+     8    16    24    32    40    48    56    64    72
+    16    32    48    64    80    96   112   128   144
+    24    48    72    96   120   144   168   192   216
+    32    64    96   128   160   192   224   256   288
+    40    80   120   160   200   240   280   320   360
+    48    96   144   192   240   288   336   384   432
+    56   112   168   224   280   336   392   448   504
+    64   128   192   256   320   384   448   512   576
+    72   144   216   288   360   432   504   576   648
+
+
+table(:,:,9) =
+
+     9    18    27    36    45    54    63    72    81
+    18    36    54    72    90   108   126   144   162
+    27    54    81   108   135   162   189   216   243
+    36    72   108   144   180   216   252   288   324
+    45    90   135   180   225   270   315   360   405
+    54   108   162   216   270   324   378   432   486
+    63   126   189   252   315   378   441   504   567
+    72   144   216   288   360   432   504   576   648
+    81   162   243   324   405   486   567   648   729
+
+</pre><h2>Task #2<a name="2"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+format <span class="string">short</span>
+
+XX = zeros(1,512);
+REF = zeros(1,257);
+IMF = zeros(1,257);
+
+n = input(<span class="string">'Number of Frequencies'</span>);
+<span class="keyword">for</span> k = 1:n
+    XX(k) = input(<span class="string">'Input Frequencies: '</span>);
+<span class="keyword">end</span>
+
+<span class="comment">% Mythical Program which loads data into REF and IMF</span>
+
+N = length(XX);
+
+<span class="keyword">for</span> k = 1:257
+    REF(k) = REF(k)/(N/2);
+    IMF(k) = IMF(k)/(N/2);
+<span class="keyword">end</span>
+
+<span class="keyword">for</span> h = 1:512
+    XX(h) = 0;
+<span class="keyword">end</span>
+<span class="keyword">for</span> k = 1:257
+    <span class="keyword">for</span> h = 1:512
+        XX(h) = XX(h) + REF(k)*cos(2*pi*k*h/N);
+        XX(h) = XX(h) + IMF(k)*sin(2*pi*k*h/N);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Error using input
+Cannot call INPUT from EVALC.
+
+Error in Untitled (line 27)
+n = input('Number of Frequencies');
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% *Lab 6*
+
+%% Task #1
+
+% Create a 9x9 Multiplication table using for loops
+clear all
+format SHORT
+
+for n = 1:9
+    for k = 1:9
+        for u = 1:9
+        table(n,k,u) = n*k*u;
+        end
+    end
+end
+
+table
+
+%% Task #2
+clear all
+format short
+
+XX = zeros(1,512);
+REF = zeros(1,257);
+IMF = zeros(1,257);
+
+n = input('Number of Frequencies');
+for k = 1:n
+    XX(k) = input('Input Frequencies: ');
+end
+
+% Mythical Program which loads data into REF and IMF
+
+N = length(XX);
+
+for k = 1:257
+    REF(k) = REF(k)/(N/2);
+    IMF(k) = IMF(k)/(N/2);
+end
+
+for h = 1:512
+    XX(h) = 0;
+end
+for k = 1:257
+    for h = 1:512
+        XX(h) = XX(h) + REF(k)*cos(2*pi*k*h/N);
+        XX(h) = XX(h) + IMF(k)*sin(2*pi*k*h/N);
+    end
+end
+
+
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>

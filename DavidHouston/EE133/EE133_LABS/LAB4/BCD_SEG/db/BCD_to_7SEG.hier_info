@@ -1,0 +1,23 @@
+|BCD_to_7SEG
+D[0] => a~6.IN1
+D[0] => a~11.IN0
+D[0] => b~2.IN1
+D[0] => c~1.IN1
+D[0] => d~6.IN1
+D[1] => a~0.IN1
+D[1] => a~1.IN0
+D[1] => g~1.IN1
+D[2] => a~5.IN1
+D[2] => a~9.IN0
+D[3] => a~2.IN1
+D[3] => a~8.IN0
+D[3] => d~8.IN1
+a <= a~13.DB_MAX_OUTPUT_PORT_TYPE
+b <= b~6.DB_MAX_OUTPUT_PORT_TYPE
+c <= c~2.DB_MAX_OUTPUT_PORT_TYPE
+d <= d~10.DB_MAX_OUTPUT_PORT_TYPE
+e <= e~0.DB_MAX_OUTPUT_PORT_TYPE
+f <= f~3.DB_MAX_OUTPUT_PORT_TYPE
+g <= g~3.DB_MAX_OUTPUT_PORT_TYPE
+
+

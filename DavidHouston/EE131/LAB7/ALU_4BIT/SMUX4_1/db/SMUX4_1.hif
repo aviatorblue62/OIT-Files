@@ -1,0 +1,117 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+33
+1921
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|decoder2_4|
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|and_4bit|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+AND_4BIT
+# storage
+db|SMUX4_1.(1).cnf
+db|SMUX4_1.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|and_4bit|and_4bit.v
+2a9cbaa688468fd247dc261963ea17
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+AND_4BIT:inst7
+}
+# macro_sequence
+
+# end
+# entity
+DECODER2_4
+# storage
+db|SMUX4_1.(2).cnf
+db|SMUX4_1.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|decoder2_4|decoder2_4.v
+ee7182bccecfb89a334127a74d71f85
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DECODER2_4:inst
+}
+# macro_sequence
+
+# end
+# entity
+SMUX4_1
+# storage
+db|SMUX4_1.(0).cnf
+db|SMUX4_1.(0).cnf
+# case_insensitive
+# source_file
+smux4_1.bdf
+ad3314b464ac15b2bab3986d7aa63567
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

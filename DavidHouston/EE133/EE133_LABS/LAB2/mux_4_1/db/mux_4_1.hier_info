@@ -1,0 +1,34 @@
+|mux_4_1
+A => A~0.IN1
+B => B~0.IN1
+C => C~0.IN1
+D => D~0.IN1
+SEL[0] => SEL[0]~1.IN2
+SEL[1] => SEL[1]~0.IN1
+Y <= mux_2_1:m2.port3
+
+
+|mux_4_1|mux_2_1:m11
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4_1|mux_2_1:m12
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4_1|mux_2_1:m2
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+

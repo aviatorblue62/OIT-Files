@@ -1,0 +1,278 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+33
+1921
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+|my documents|davidhouston|ee131labs|lab8|add_1bit|
+|my documents|davidhouston|ee131labs|lab8|sub_4bit|
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|and_4bit|
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|or_4bit|
+|my documents|davidhouston|ee131labs|lab8|mux4_1|
+|my documents|davidhouston|ee131labs|lab8|mux2_1|
+|my documents|davidhouston|ee131labs|lab8|add_4bit|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+MUX2_1
+# storage
+db|ALU_4BIT.(1).cnf
+db|ALU_4BIT.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|mux2_1|mux2_1.v
+fa3c4828a42e87175df784ec32ba6b4a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+MUX2_1:inst15
+}
+# macro_sequence
+
+# end
+# entity
+ADD_4BIT
+# storage
+db|ALU_4BIT.(2).cnf
+db|ALU_4BIT.(2).cnf
+# case_insensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|add_1bit|add_4bit.bdf
+e66a49255659af20a249c66bad8e069
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+add_4bit:inst12
+sub_4bit:inst13|add_4bit:inst
+}
+# macro_sequence
+
+# end
+# entity
+ADD_1BIT
+# storage
+db|ALU_4BIT.(3).cnf
+db|ALU_4BIT.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|add_1bit|add_1bit.v
+83b2db8dac8c0a1f39cae3d7c166ee9
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+add_4bit:inst12|ADD_1BIT:inst20
+add_4bit:inst12|ADD_1BIT:inst19
+add_4bit:inst12|ADD_1BIT:inst18
+add_4bit:inst12|ADD_1BIT:inst
+sub_4bit:inst13|add_4bit:inst|ADD_1BIT:inst20
+sub_4bit:inst13|add_4bit:inst|ADD_1BIT:inst19
+sub_4bit:inst13|add_4bit:inst|ADD_1BIT:inst18
+sub_4bit:inst13|add_4bit:inst|ADD_1BIT:inst
+}
+# macro_sequence
+
+# end
+# entity
+SUB_4BIT
+# storage
+db|ALU_4BIT.(4).cnf
+db|ALU_4BIT.(4).cnf
+# case_insensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|add_4bit|sub_4bit.bdf
+43156f8ee0a2dad0487a2b916a95a2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+sub_4bit:inst13
+}
+# macro_sequence
+
+# end
+# entity
+MUX4_1
+# storage
+db|ALU_4BIT.(5).cnf
+db|ALU_4BIT.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|mux4_1|mux4_1.v
+1636f682afe038608b9d92bea18d45
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+MUX4_1:inst14
+}
+# macro_sequence
+
+# end
+# entity
+AND_4BIT
+# storage
+db|ALU_4BIT.(6).cnf
+db|ALU_4BIT.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|and_4bit|and_4bit.v
+2a9cbaa688468fd247dc261963ea17
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+AND_4BIT:inst
+}
+# macro_sequence
+
+# end
+# entity
+OR_4BIT
+# storage
+db|ALU_4BIT.(7).cnf
+db|ALU_4BIT.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|or_4bit|or_4bit.v
+bfd2ff22716c6143cbba61d584ccf3d
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+OR_4BIT:inst11
+}
+# macro_sequence
+
+# end
+# entity
+ALU_4BIT
+# storage
+db|ALU_4BIT.(0).cnf
+db|ALU_4BIT.(0).cnf
+# case_insensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|and_4bit|alu_4bit.bdf
+cb8fb045b275f245d3472dc0bfd3d9c8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

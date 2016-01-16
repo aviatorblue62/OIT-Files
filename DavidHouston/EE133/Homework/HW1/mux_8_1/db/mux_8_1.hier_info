@@ -1,0 +1,71 @@
+|mux_8_1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+Sel[0] => Sel[0].IN4
+Sel[1] => Sel[1].IN2
+Sel[2] => Sel[2].IN1
+mux81out <= mux2_1:m31.port3
+
+
+|mux_8_1|mux2_1:m11
+a => a1.IN0
+b => a2.IN0
+sel => n1.IN0
+sel => a2.IN1
+f <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_8_1|mux2_1:m12
+a => a1.IN0
+b => a2.IN0
+sel => n1.IN0
+sel => a2.IN1
+f <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_8_1|mux2_1:m13
+a => a1.IN0
+b => a2.IN0
+sel => n1.IN0
+sel => a2.IN1
+f <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_8_1|mux2_1:m14
+a => a1.IN0
+b => a2.IN0
+sel => n1.IN0
+sel => a2.IN1
+f <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_8_1|mux2_1:m21
+a => a1.IN0
+b => a2.IN0
+sel => n1.IN0
+sel => a2.IN1
+f <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_8_1|mux2_1:m22
+a => a1.IN0
+b => a2.IN0
+sel => n1.IN0
+sel => a2.IN1
+f <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_8_1|mux2_1:m31
+a => a1.IN0
+b => a2.IN0
+sel => n1.IN0
+sel => a2.IN1
+f <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+

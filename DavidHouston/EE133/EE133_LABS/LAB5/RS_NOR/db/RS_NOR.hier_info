@@ -1,0 +1,7 @@
+|RS_NOR
+R => n1.IN0
+S => n2.IN0
+Q <= n1.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= n2.DB_MAX_OUTPUT_PORT_TYPE
+
+

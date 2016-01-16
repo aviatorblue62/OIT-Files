@@ -1,0 +1,8 @@
+|LAB6
+a[0] => outeq~1.IN0
+a[1] => outeq~0.IN0
+b[0] => outeq~1.IN1
+b[1] => outeq~0.IN1
+outeq <= outeq~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,244 @@
+EE 333
+Notes
+10/14/2014
+
+negate a value
+--------------------------------------------------------------------------
+to negate D
+
+negb
+adca #0
+nega
+--------------------------------------------------------------------------
+emul(s)	Y:D  <=  Y*D
+idiv	X <= D/X Remainder D
+ediv(s)	Y <= Y:D/X Remainder D
+
+--------------------------------------------------------------------------
+
+Convert a Celsius temp into Fahrenheit
+
+F = C*9/5+32
+
+cels:	dw	#100	;load cels with 100
+fahr:	dw	#0	;load fahr with 0
+	ldy	cels	;load Y with cels
+	ldd	#9	;load D with 9
+	emuls		;mulitply Y*D
+	ldx	#5	;Load X with 5
+	edivs		;divide Y:D/X
+	leay	32,y	;Add 32 to Y
+
+--------------------------------------------------------------------------
+
+Branch Intructions
+
+stored value in variable
+
+tem:	db
+heat:	db	0 - off
+		not 0 - on
+
+We want to turn heater on if it drops below 70 deg
+
+--------{temp < 70} ------> T (tho) ---------> {heat <- 1}--
+|		    |                                	   |
+|	            |-----> F ---------> {heat <- 0}-------|
+|						           |
+|---------<------------------------<-----------------------|		
+
+
+cba
+ampa mem
+cmpb mem
+cpd mem
+cpx mem
+cpy mem
+
+tst mem
+tsta
+tstb
+
+beq foo ; if equal execution continues at "foo" if not it starts at next avaible
+
+We need to compare tempature vaues
+
+tem:	db
+heat:	db	;0 - off
+		;not 0 - on
+start:	ldaa	tem
+	cmpa	#70
+	blo	tho	;tho -> turn heater on
+thf:	clr	heat
+	bra	join
+tho:	movb	#1 heat
+join:
+.
+.
+.
+.
+.
+jump	start
+
+Branch instructions have to be 124 bytes
+If out of range you will have phasing errors and need to use a long branch.
+Never use a long branch use a jump to jump to the start of the program.
+
+--------------------------------------------------------------------------
+
+Loops!!!!
+
+There is a sentenial and counter loops (these have tests)
+
+Counters loop we have a loop we want to execute it a certain number of times.
+We use a counter to keep track of that number
+
+Sentenial can execute and indierminate number of times. It uses a value that is
+determined externally.
+
+EXAMPLE:
+
+start----->{Shovel Coal}----->{temp < 70} ----> F (return to start until true)
+
+Now all of the loops have a test which is use to decide wheater or note continue of not.
+
+(Post Test)
+      _______________
+      |              |
+      |              |
+      |              |
+[ A <- A + 1 ]       |
+[ B <- B + 1 ]       |
+      |              |
+      |              |
+   ___|___           | 
+  /       \          | 
+ | A = 37  |---------|
+  \___?___/  N
+      |
+      |Y
+      |
+     DONE!!
+
+Lets see :)
+
+Loop with Pre-Test instead
+
+    Start
+   ___|___            
+  /       \           
+ | A = 37  |---------Done!!!!
+  \___?___/  Y
+      |
+      |
+[(Y) <- (X) ]
+[ X  <- X+1 ]
+[ Y  <- Y+1 ]
+[ A  <- A-1 ]
+      |
+    To Test
+
+
+Code for Post Test
+
+loop:	tsta
+	beq	done
+	movb 1,x+ 1,y+
+	deca
+	bra	loop
+done
+
+Instead of doing the tsta and beq we can combine them to form tbeq
+
+i.e. tbeq a done
+
+Suppose we add another copy of the test down stairs below the operation
+Does the same thing, just becomes a loop with post test
+
+Now the code becomes:
+
+	tbeq a done
+loop:	movb 1,x+ 1,y+
+	dbne a loop	; changed this
+done:
+
+Childs play my lads
+
+--------------------------------------------------------------------------
+
+Instruction Timing
+
+Programers maunual for timing and instructions
+Under Freescale Documentation
+S12CPUV2.pdf on the website
+Section 6: Instruction Glossary
+
+P is an instruction fetch
+R reading data for instruction
+W write operation
+O optional instruction fetch
+I indirect refrenece
+
+Just count the number of letters for how long it takes
+One letter take 1/24us	
+
+Which is better to clear D?
+
+ldd #0 (3 bytes 2 clocks)
+clra and clrb (1 byte 1 clock)*2 = (2 bytes 2 clocks)
+
+It doesn't matter which one in terms of speed. But in terms of space it is better
+to clra and clrb.
+
+Say we want to
+
+raise pin
+.
+.
+.
+delay 0.25 us  <--- this is all we care about right now
+.
+.
+.
+lower pin
+
+need to delay for 6 clocks
+since
+nop (1 byte 1 clock)
+then
+
+raise pin
+nop
+nop
+nop
+nop
+nop
+nop
+lower pin
+
+say 10us???
+
+we would need 240 nop instructions so...
+
+If were to doe this how long would it take for each instruction?
+
+	ldaa #something (1 clock)
+L:	deca		(1 clock/round)	
+	bne	L	(3 clock/round)
+
+256 = 1 + (something - 1)*(3+1) + 1 + 1
+
+256 = something*4 - 1
+something = 257/4 = 64
+
+--------------------------------------------------------------------------
+
+Homework 3 & Lab 2
+
+Looooooooks fun............
+
+--------------------------------------------------------------------------
+Notes:	Get the instruction table from slideshow. 
+				
+
+

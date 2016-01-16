@@ -1,0 +1,13 @@
+|EE133_HW1_D
+W => y3.IN0
+W => y4.IN0
+X => x2.IN0
+X => y2.IN0
+X => y4.IN1
+Y => x1.IN0
+Y => y2.IN1
+Z => y3.IN1
+Z => y4.IN2
+F1 <= u1.DB_MAX_OUTPUT_PORT_TYPE
+
+

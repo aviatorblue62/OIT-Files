@@ -1,0 +1,8 @@
+module TriState(ena,y);
+  
+  input ena;
+  output [3:0]y;
+  
+  assign y = ena ? 4'bzzzz : y;
+  
+endmodule

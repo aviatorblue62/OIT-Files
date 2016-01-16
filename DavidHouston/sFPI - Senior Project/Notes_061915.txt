@@ -1,0 +1,15 @@
+Senior Project
+David Houston
+06/19/2015
+
+Design for amplifier setup is as follows:
+
+1. OP-AMP setup
+	a. Vairable Input resistance (range 330 - 2k ohms)
+	b. Feedback circuit
+		i. 1 - 990 ohm resistor
+
+2. RC-DC Blocking Circuit
+	a. 5k ohm resistor
+	b. 4.5 microfarad capacitor
+

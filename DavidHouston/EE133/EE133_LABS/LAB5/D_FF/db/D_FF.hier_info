@@ -1,0 +1,25 @@
+|D_FF
+D => D.IN1
+CLK => CLK.IN1
+Q <= D_LATCH:slave.port2
+nQ <= D_LATCH:slave.port3
+
+
+|D_FF|D_LATCH:master
+D => X.IN0
+D => Y.IN0
+CLK => X.IN1
+CLK => Y.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|D_FF|D_LATCH:slave
+D => X.IN0
+D => Y.IN0
+CLK => X.IN1
+CLK => Y.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ.DB_MAX_OUTPUT_PORT_TYPE
+
+

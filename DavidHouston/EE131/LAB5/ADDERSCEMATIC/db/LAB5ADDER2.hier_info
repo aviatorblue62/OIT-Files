@@ -1,0 +1,9 @@
+|LAB5ADDER2
+out1 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+inB => inst1.IN0
+inB => inst.IN0
+inA => inst1.IN1
+inC => inst.IN1
+out2 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

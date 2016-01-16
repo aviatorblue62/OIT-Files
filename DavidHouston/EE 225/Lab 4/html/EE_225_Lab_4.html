@@ -1,0 +1,890 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>EE 225 Lab 4</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-05-08"><meta name="DC.source" content="EE_225_Lab_4.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>EE 225 Lab 4</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Pre-Lab</a></li><li><a href="#2">Fourier Series</a></li><li><a href="#3">Fourier Transform</a></li><li><a href="#4">Part I</a></li><li><a href="#5">Part II</a></li><li><a href="#6">Part III</a></li><li><a href="#7">Part IV</a></li><li><a href="#8">Circuit Anlaysis</a></li><li><a href="#9">Sawtooth Wave</a></li><li><a href="#10">Square Wave</a></li><li><a href="#11">Full-wave Rectified Sine</a></li><li><a href="#12">Full-wave Rectified Sine</a></li></ul></div><h2>Pre-Lab<a name="1"></a></h2><pre class="codeinput"><span class="comment">% Y = 3 + 5*j;</span>
+<span class="comment">%</span>
+<span class="comment">% abs(Y)</span>
+<span class="comment">% angle(Y)</span>
+
+<span class="comment">%----------------------------------</span>
+
+<span class="comment">% xx = [ones(1,4),[2:2:11],zeros(1,3)]</span>
+<span class="comment">% xx(3:7)</span>
+<span class="comment">% length(xx)</span>
+<span class="comment">% xx(2:2:length(xx))</span>
+<span class="comment">%</span>
+<span class="comment">% xx(3,7) = pi*(1:5)</span>
+</pre><h2>Fourier Series<a name="2"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+format <span class="string">SHORT</span>
+
+No = 32;
+To = pi;
+n = linspace(0,pi,No);
+x = exp(-n/2);
+
+X_f = fft(x,No);
+X_f = [conj(X_f(No:-1:2)),X_f];
+X_fmag = abs(X_f);
+X_fangle = angle(X_f);
+k = -No/2+1:No/2-1;
+
+subplot(211)
+stem(k,X_fmag(No/2+1:length(X_f)-No/2))
+title(<span class="string">'Magnitude'</span>)
+
+subplot(212)
+stem(k,X_fangle(No/2+1:length(X_f)-No/2))
+title(<span class="string">'Phase'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_01.png" alt=""> <h2>Fourier Transform<a name="3"></a></h2><h2>Part I<a name="4"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+format <span class="string">short</span>
+
+N_pnts = 100; <span class="comment">% t goes from -5 to 5</span>
+
+t0 = linspace(-5,(-1-1/10),N_pnts/2.5);
+t1 = linspace(-1,0,11);
+t2 = linspace((0+1/10),1,N_pnts/10);
+t3 = linspace((1+1/10),5,N_pnts/2.5);
+t = linspace(-5,5,101);
+
+x_1 = [0*t0 (t1+1) 1 1 1 1 1 1 1 1 1 1 0*t3];
+
+subplot(311)
+plot(t,x_1)
+title(<span class="string">'Piecewise Linear Function'</span>)
+xlabel(<span class="string">'-5 \leq t \leq 5'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+X1 = fft(x_1);
+X1 = fftshift(X1);
+X1mag = abs(X1);
+X1mag = X1mag/max(X1mag); <span class="comment">%Normalization</span>
+X1angle = angle(X1);
+X1angle = X1angle/max(X1angle);
+F1 = [-length(X1)/2:(length(X1)/2)-1]*100/length(X1);
+
+subplot(312)
+plot(F1,X1mag)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+subplot(313)
+plot(F1,X1angle)
+title(<span class="string">'Phase'</span>)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Angle'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_02.png" alt=""> <h2>Part II<a name="5"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+format <span class="string">short</span>
+
+N_pnts = 100; <span class="comment">% t goes from -5 to 5</span>
+
+t0 = linspace(-5,(0-1/10),N_pnts/2);
+t1 = linspace(0,1,N_pnts/10);
+t2 = linspace(1,2,N_pnts/10);
+t3 = linspace((2+1/10),5,N_pnts/(10/3));
+t = linspace(-5,5,100);
+
+x_2 = [0*t0 (t1) 1 1 1 1 1 1 1 1 1 1 0*t3];
+
+subplot(311)
+plot(t,x_2)
+title(<span class="string">'Piecewise Linear Function'</span>)
+xlabel(<span class="string">'-5 \leq t \leq 5'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+X2 = fft(x_2);
+X2 = fftshift(X2);
+X2mag = abs(X2);
+X2mag = X2mag/max(X2mag); <span class="comment">%Normalization</span>
+X2angle = angle(X2);
+X2angle = X2angle/max(X2angle);
+F2 = [-length(X2)/2:(length(X2)/2)-1]*100/length(X2);
+
+subplot(312)
+plot(F2,X2mag)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+subplot(313)
+plot(F2,X2angle)
+title(<span class="string">'Phase'</span>)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Angle'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_03.png" alt=""> <h2>Part III<a name="6"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+format <span class="string">short</span>
+
+N_pnts = 100; <span class="comment">% t goes from -5 to 5</span>
+
+t0 = linspace(-5,(-3-1/10),N_pnts/5);
+t1 = linspace(-3,3,N_pnts/(5/3));
+t2 = linspace(3+1/10,5,N_pnts/5);
+t = linspace(-5,5,100);
+
+
+x_3 = [0*t0 ones(1,60) 0*t2];
+
+subplot(311)
+plot(t,x_3)
+title(<span class="string">'Piecewise Linear Function'</span>)
+xlabel(<span class="string">'-5 \leq t \leq 5'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+X3 = fft(x_3);
+X3 = fftshift(X3);
+X3mag = abs(X3);
+X3mag = X3mag/max(X3mag); <span class="comment">%Normalization</span>
+X3angle = angle(X3);
+X3angle = X3angle/max(X3angle);
+F3 = [-length(X3)/2:(length(X3)/2)-1]*100/length(X3);
+
+subplot(312)
+plot(F3,X3mag)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+subplot(313)
+plot(F3,X3angle)
+title(<span class="string">'Phase'</span>)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Angle'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_04.png" alt=""> <h2>Part IV<a name="7"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+format <span class="string">short</span>
+
+N_pnts = 100; <span class="comment">% t goes from -5 to 5</span>
+
+t0 = linspace(-5,(-1-1/10),N_pnts/2.5);
+t1 = linspace(-1,1,N_pnts/5);
+t2 = linspace(1+1/10,5,N_pnts/2.5);
+t = linspace(-5,5,100);
+
+
+x_4 = [0*t0 ones(1,20) 0*t2];
+
+subplot(311)
+plot(t,x_4)
+title(<span class="string">'Piecewise Linear Function'</span>)
+xlabel(<span class="string">'-5 \leq t \leq 5'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+X4 = fft(x_4);
+X4 = fftshift(X4);
+X4mag = abs(X4);
+X4mag = X4mag/max(X4mag); <span class="comment">%Normalization</span>
+X4angle = angle(X4);
+X4angle = X4angle/max(X4angle);
+F4 = [-length(X4)/2:(length(X4)/2)-1]*100/length(X4);
+
+subplot(312)
+plot(F4,X4mag)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Amplitude'</span>)
+
+subplot(313)
+plot(F4,X4angle)
+title(<span class="string">'Phase'</span>)
+xlabel(<span class="string">'f (Hz)'</span>)
+ylabel(<span class="string">'Angle'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_05.png" alt=""> <h2>Circuit Anlaysis<a name="8"></a></h2><h2>Sawtooth Wave<a name="9"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+format <span class="string">SHORTE</span>
+t = linspace(0,10,100);
+sin_val = sin(t);
+yDC = 0.5 + sin(t)/pi;
+yh = zeros(10,100);
+yh(1,:) = yDC;
+
+<span class="keyword">for</span> k=2:10
+    yh(k,:) = sin(k*t)/(k*pi);
+<span class="keyword">end</span>
+
+<span class="comment">%The Fundemental Frequency</span>
+subplot(221)
+plot(t,yDC,<span class="string">'b'</span>)
+title(<span class="string">'First Harmonic'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+grid <span class="string">on</span>
+
+<span class="comment">%The first two harmonics</span>
+
+y2 = yDC + yh(2,:);
+
+subplot(222)
+plot(t,y2,<span class="string">'r'</span>)
+title(<span class="string">'First Two Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+grid <span class="string">on</span>
+
+<span class="comment">%The first five harmonics</span>
+y5 = yDC;
+<span class="keyword">for</span> k=2:5
+    y5 = y5 + yh(k,:);
+<span class="keyword">end</span>
+subplot(223)
+plot(t,y5,<span class="string">'g'</span>)
+title(<span class="string">'First Five Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+grid <span class="string">on</span>
+
+<span class="comment">%The first ten harmonics</span>
+y10 = yDC;
+<span class="keyword">for</span> k=2:10
+    y10 = y10 + yh(k,:);
+<span class="keyword">end</span>
+subplot(224)
+plot(t,y10,<span class="string">'m'</span>)
+title(<span class="string">'First Ten Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+grid <span class="string">on</span>
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_06.png" alt=""> <h2>Square Wave<a name="10"></a></h2><pre class="codeinput">t = linspace(0,10,1000);
+Amp = 5;
+zero = zeros(1,1000);
+yh = zeros(10,1000);
+
+<span class="keyword">for</span> k=1:10
+    yh(k,:) = (4*Amp/pi)*(1/((2*k)-1))*sin((2*k-1)*t);
+<span class="keyword">end</span>
+
+<span class="comment">%The Fundemental Frequency</span>
+
+y = yh(1,:);
+
+subplot(221)
+plot(t,y,<span class="string">'r'</span>)
+title(<span class="string">'Fundemental Frequency'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+<span class="comment">%The first two harmonics</span>
+y2 = zero;
+<span class="keyword">for</span> k = 1:2
+ y2 = y2 + yh(k,:);
+<span class="keyword">end</span>
+
+subplot(222)
+plot(t,y2,<span class="string">'r'</span>)
+title(<span class="string">'The First Two Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+<span class="comment">%The first five harmonics</span>
+y5 = zero;
+<span class="keyword">for</span> k=1:6
+    y5 = y5 + yh(k,:);
+<span class="keyword">end</span>
+subplot(223)
+plot(t,y5,<span class="string">'g'</span>)
+title(<span class="string">'First Five Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+<span class="comment">%The first ten harmonics</span>
+y10 = zero;
+<span class="keyword">for</span> k=1:10
+    y10 = y10 + yh(k,:);
+<span class="keyword">end</span>
+subplot(224)
+plot(t,y10,<span class="string">'m'</span>)
+title(<span class="string">'First Ten Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_07.png" alt=""> <h2>Full-wave Rectified Sine<a name="11"></a></h2><pre class="codeinput">t = linspace(0,10,1000);
+Amp = 2;
+yh = zeros(10,1000);
+yDC = 2*Amp/pi;
+
+<span class="keyword">for</span> k=1:10
+    yh(k,:) = -(4*Amp/pi)*(1/((4*k^2)-1))*cos(4*k*t);
+<span class="keyword">end</span>
+
+<span class="comment">%The Fundemental Frequency</span>
+
+y = yDC + yh(1,:);
+
+subplot(221)
+plot(t,y,<span class="string">'r'</span>)
+title(<span class="string">'Fundemental Frequency'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+
+<span class="comment">%The first two harmonics</span>
+y2 = yDC;
+<span class="keyword">for</span> k = 1:2
+ y2 = y2 + yh(k,:);
+<span class="keyword">end</span>
+
+subplot(222)
+plot(t,y2,<span class="string">'r'</span>)
+title(<span class="string">'The First Two Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+<span class="comment">%The first five harmonics</span>
+y5 = yDC;
+<span class="keyword">for</span> k=1:6
+    y5 = y5 + yh(k,:);
+<span class="keyword">end</span>
+subplot(223)
+plot(t,y5,<span class="string">'g'</span>)
+title(<span class="string">'First Five Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+<span class="comment">%The first ten harmonics</span>
+y10 = yDC;
+<span class="keyword">for</span> k=1:10
+    y10 = y10 + yh(k,:);
+<span class="keyword">end</span>
+subplot(224)
+plot(t,y10,<span class="string">'m'</span>)
+title(<span class="string">'First Ten Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_08.png" alt=""> <h2>Full-wave Rectified Sine<a name="12"></a></h2><pre class="codeinput">t = linspace(0,10,1000);
+Amp = 2;
+yh = zeros(10,1000);
+y1 = Amp/pi + Amp*sin(4*t)/2;
+
+<span class="keyword">for</span> k=1:10
+    yh(k,:) = -(2*Amp/pi)*(1/((4*k^2)-1))*cos(2*4*k*t);
+<span class="keyword">end</span>
+
+<span class="comment">%The Fundemental Frequency</span>
+
+y = y1;
+
+subplot(221)
+plot(t,y,<span class="string">'r'</span>)
+title(<span class="string">'Fundemental Frequency'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+
+<span class="comment">%The first two harmonics</span>
+y2 = y;
+<span class="keyword">for</span> k = 1:2
+ y2 = y2 + yh(k,:);
+<span class="keyword">end</span>
+
+subplot(222)
+plot(t,y2,<span class="string">'r'</span>)
+title(<span class="string">'The First Two Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+<span class="comment">%The first five harmonics</span>
+y5 = y;
+<span class="keyword">for</span> k=1:6
+    y5 = y5 + yh(k,:);
+<span class="keyword">end</span>
+subplot(223)
+plot(t,y5,<span class="string">'g'</span>)
+title(<span class="string">'First Five Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+
+<span class="comment">%The first ten harmonics</span>
+y10 = y;
+<span class="keyword">for</span> k=1:10
+    y10 = y10 + yh(k,:);
+<span class="keyword">end</span>
+subplot(224)
+plot(t,y10,<span class="string">'m'</span>)
+title(<span class="string">'First Ten Harmonics'</span>)
+xlabel(<span class="string">'t (sec)'</span>)
+ylabel(<span class="string">'V (volts)'</span>)
+</pre><img vspace="5" hspace="5" src="EE_225_Lab_4_09.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% EE 225 Lab 4
+
+%% Pre-Lab
+
+% Y = 3 + 5*j;
+% 
+% abs(Y)
+% angle(Y)
+
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+
+% xx = [ones(1,4),[2:2:11],zeros(1,3)]
+% xx(3:7)
+% length(xx)
+% xx(2:2:length(xx))
+% 
+% xx(3,7) = pi*(1:5)
+
+
+%% Fourier Series
+clear all
+format SHORT
+
+No = 32;
+To = pi;
+n = linspace(0,pi,No);
+x = exp(-n/2);
+
+X_f = fft(x,No);
+X_f = [conj(X_f(No:-1:2)),X_f];
+X_fmag = abs(X_f);
+X_fangle = angle(X_f);
+k = -No/2+1:No/2-1;
+
+subplot(211)
+stem(k,X_fmag(No/2+1:length(X_f)-No/2))
+title('Magnitude')
+
+subplot(212)
+stem(k,X_fangle(No/2+1:length(X_f)-No/2))
+title('Phase')
+
+%% Fourier Transform
+
+%% Part I
+
+clear all
+format short
+
+N_pnts = 100; % t goes from -5 to 5
+
+t0 = linspace(-5,(-1-1/10),N_pnts/2.5);
+t1 = linspace(-1,0,11);
+t2 = linspace((0+1/10),1,N_pnts/10);
+t3 = linspace((1+1/10),5,N_pnts/2.5);
+t = linspace(-5,5,101);
+
+x_1 = [0*t0 (t1+1) 1 1 1 1 1 1 1 1 1 1 0*t3];
+
+subplot(311)
+plot(t,x_1)
+title('Piecewise Linear Function')
+xlabel('-5 \leq t \leq 5')
+ylabel('Amplitude')
+
+X1 = fft(x_1);
+X1 = fftshift(X1);
+X1mag = abs(X1);
+X1mag = X1mag/max(X1mag); %Normalization
+X1angle = angle(X1);
+X1angle = X1angle/max(X1angle);
+F1 = [-length(X1)/2:(length(X1)/2)-1]*100/length(X1);
+
+subplot(312)
+plot(F1,X1mag)
+xlabel('f (Hz)')
+ylabel('Amplitude')
+
+subplot(313)
+plot(F1,X1angle)
+title('Phase')
+xlabel('f (Hz)')
+ylabel('Angle')
+
+%% Part II
+
+clear all
+format short
+
+N_pnts = 100; % t goes from -5 to 5
+
+t0 = linspace(-5,(0-1/10),N_pnts/2);
+t1 = linspace(0,1,N_pnts/10);
+t2 = linspace(1,2,N_pnts/10);
+t3 = linspace((2+1/10),5,N_pnts/(10/3));
+t = linspace(-5,5,100);
+
+x_2 = [0*t0 (t1) 1 1 1 1 1 1 1 1 1 1 0*t3];
+
+subplot(311)
+plot(t,x_2)
+title('Piecewise Linear Function')
+xlabel('-5 \leq t \leq 5')
+ylabel('Amplitude')
+
+X2 = fft(x_2);
+X2 = fftshift(X2);
+X2mag = abs(X2);
+X2mag = X2mag/max(X2mag); %Normalization
+X2angle = angle(X2);
+X2angle = X2angle/max(X2angle);
+F2 = [-length(X2)/2:(length(X2)/2)-1]*100/length(X2);
+
+subplot(312)
+plot(F2,X2mag)
+xlabel('f (Hz)')
+ylabel('Amplitude')
+
+subplot(313)
+plot(F2,X2angle)
+title('Phase')
+xlabel('f (Hz)')
+ylabel('Angle')
+
+%% Part III
+
+clear all
+format short
+
+N_pnts = 100; % t goes from -5 to 5
+
+t0 = linspace(-5,(-3-1/10),N_pnts/5);
+t1 = linspace(-3,3,N_pnts/(5/3));
+t2 = linspace(3+1/10,5,N_pnts/5);
+t = linspace(-5,5,100);
+
+
+x_3 = [0*t0 ones(1,60) 0*t2];
+
+subplot(311)
+plot(t,x_3)
+title('Piecewise Linear Function')
+xlabel('-5 \leq t \leq 5')
+ylabel('Amplitude')
+
+X3 = fft(x_3);
+X3 = fftshift(X3);
+X3mag = abs(X3);
+X3mag = X3mag/max(X3mag); %Normalization
+X3angle = angle(X3);
+X3angle = X3angle/max(X3angle);
+F3 = [-length(X3)/2:(length(X3)/2)-1]*100/length(X3);
+
+subplot(312)
+plot(F3,X3mag)
+xlabel('f (Hz)')
+ylabel('Amplitude')
+
+subplot(313)
+plot(F3,X3angle)
+title('Phase')
+xlabel('f (Hz)')
+ylabel('Angle')
+
+
+%% Part IV
+clear all
+format short
+
+N_pnts = 100; % t goes from -5 to 5
+
+t0 = linspace(-5,(-1-1/10),N_pnts/2.5);
+t1 = linspace(-1,1,N_pnts/5);
+t2 = linspace(1+1/10,5,N_pnts/2.5);
+t = linspace(-5,5,100);
+
+
+x_4 = [0*t0 ones(1,20) 0*t2];
+
+subplot(311)
+plot(t,x_4)
+title('Piecewise Linear Function')
+xlabel('-5 \leq t \leq 5')
+ylabel('Amplitude')
+
+X4 = fft(x_4);
+X4 = fftshift(X4);
+X4mag = abs(X4);
+X4mag = X4mag/max(X4mag); %Normalization
+X4angle = angle(X4);
+X4angle = X4angle/max(X4angle);
+F4 = [-length(X4)/2:(length(X4)/2)-1]*100/length(X4);
+
+subplot(312)
+plot(F4,X4mag)
+xlabel('f (Hz)')
+ylabel('Amplitude')
+
+subplot(313)
+plot(F4,X4angle)
+title('Phase')
+xlabel('f (Hz)')
+ylabel('Angle')
+
+%% Circuit Anlaysis
+
+%% Sawtooth Wave
+clear all
+format SHORTE
+t = linspace(0,10,100);
+sin_val = sin(t);
+yDC = 0.5 + sin(t)/pi;
+yh = zeros(10,100);
+yh(1,:) = yDC;
+
+for k=2:10
+    yh(k,:) = sin(k*t)/(k*pi);
+end
+
+%The Fundemental Frequency
+subplot(221)
+plot(t,yDC,'b')
+title('First Harmonic')
+xlabel('t (sec)')
+ylabel('V (volts)')
+grid on
+
+%The first two harmonics
+
+y2 = yDC + yh(2,:);
+
+subplot(222)
+plot(t,y2,'r')
+title('First Two Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+grid on
+
+%The first five harmonics
+y5 = yDC;
+for k=2:5
+    y5 = y5 + yh(k,:);
+end
+subplot(223)
+plot(t,y5,'g')
+title('First Five Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+grid on
+
+%The first ten harmonics
+y10 = yDC;
+for k=2:10
+    y10 = y10 + yh(k,:);
+end
+subplot(224)
+plot(t,y10,'m')
+title('First Ten Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+grid on
+
+%% Square Wave
+t = linspace(0,10,1000);
+Amp = 5;
+zero = zeros(1,1000);
+yh = zeros(10,1000);
+
+for k=1:10
+    yh(k,:) = (4*Amp/pi)*(1/((2*k)-1))*sin((2*k-1)*t);
+end
+
+%The Fundemental Frequency
+
+y = yh(1,:);
+
+subplot(221)
+plot(t,y,'r')
+title('Fundemental Frequency')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%The first two harmonics
+y2 = zero;
+for k = 1:2
+ y2 = y2 + yh(k,:);
+end
+
+subplot(222)
+plot(t,y2,'r')
+title('The First Two Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%The first five harmonics
+y5 = zero;
+for k=1:6
+    y5 = y5 + yh(k,:);
+end
+subplot(223)
+plot(t,y5,'g')
+title('First Five Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%The first ten harmonics
+y10 = zero;
+for k=1:10
+    y10 = y10 + yh(k,:);
+end
+subplot(224)
+plot(t,y10,'m')
+title('First Ten Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%% Full-wave Rectified Sine
+t = linspace(0,10,1000);
+Amp = 2;
+yh = zeros(10,1000);
+yDC = 2*Amp/pi;
+
+for k=1:10
+    yh(k,:) = -(4*Amp/pi)*(1/((4*k^2)-1))*cos(4*k*t);
+end
+
+%The Fundemental Frequency
+
+y = yDC + yh(1,:);
+
+subplot(221)
+plot(t,y,'r')
+title('Fundemental Frequency')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+
+%The first two harmonics
+y2 = yDC;
+for k = 1:2
+ y2 = y2 + yh(k,:);
+end
+
+subplot(222)
+plot(t,y2,'r')
+title('The First Two Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%The first five harmonics
+y5 = yDC;
+for k=1:6
+    y5 = y5 + yh(k,:);
+end
+subplot(223)
+plot(t,y5,'g')
+title('First Five Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%The first ten harmonics
+y10 = yDC;
+for k=1:10
+    y10 = y10 + yh(k,:);
+end
+subplot(224)
+plot(t,y10,'m')
+title('First Ten Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%% Full-wave Rectified Sine
+t = linspace(0,10,1000);
+Amp = 2;
+yh = zeros(10,1000);
+y1 = Amp/pi + Amp*sin(4*t)/2;
+
+for k=1:10
+    yh(k,:) = -(2*Amp/pi)*(1/((4*k^2)-1))*cos(2*4*k*t);
+end
+
+%The Fundemental Frequency
+
+y = y1;
+
+subplot(221)
+plot(t,y,'r')
+title('Fundemental Frequency')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+
+%The first two harmonics
+y2 = y;
+for k = 1:2
+ y2 = y2 + yh(k,:);
+end
+
+subplot(222)
+plot(t,y2,'r')
+title('The First Two Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%The first five harmonics
+y5 = y;
+for k=1:6
+    y5 = y5 + yh(k,:);
+end
+subplot(223)
+plot(t,y5,'g')
+title('First Five Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+
+%The first ten harmonics
+y10 = y;
+for k=1:10
+    y10 = y10 + yh(k,:);
+end
+subplot(224)
+plot(t,y10,'m')
+title('First Ten Harmonics')
+xlabel('t (sec)')
+ylabel('V (volts)')
+##### SOURCE END #####
+--></body></html>

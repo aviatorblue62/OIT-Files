@@ -1,0 +1,14 @@
+|LABADDERCPLD
+a => w1.IN0
+a => w2.IN0
+a => w4.IN0
+b => w1.IN1
+b => w2.IN1
+b => w3.IN0
+cin => sum.IN0
+cin => w3.IN1
+cin => w4.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

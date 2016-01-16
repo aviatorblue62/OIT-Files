@@ -1,0 +1,14 @@
+|LAB4ADDER
+A => u1.IN0
+A => u3.IN0
+A => u5.IN0
+B => u1.IN1
+B => u3.IN1
+B => u4.IN0
+CIN => u2.IN0
+CIN => u4.IN1
+CIN => u5.IN1
+SUM <= u2.DB_MAX_OUTPUT_PORT_TYPE
+COUT <= u6.DB_MAX_OUTPUT_PORT_TYPE
+
+

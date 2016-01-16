@@ -1,0 +1,12 @@
+|EE133_HW1
+F1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+W => inst13.IN0
+Z => inst14.IN0
+Z => inst16.IN2
+Z => inst8.IN1
+X => inst15.IN1
+X => inst16.IN0
+Y => inst15.IN2
+Y => inst16.IN1
+
+

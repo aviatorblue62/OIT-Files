@@ -1,0 +1,38 @@
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+
+WED
+
+	Undo Commands
+	     1.	Edit Waveform
+	     2.	Edit Waveform
+	     3.	Node or Bus Properties
+			 *** 
+	     4.	Node or Bus Properties
+			 ***  *** 
+	     5.	Node or Bus Properties
+			 *** 
+	     6.	Count Value
+			 ***  *** 
+	     7.	Edit Waveform
+	     8.	Edit Waveform
+	     9.	Edit Waveform
+	    10.	Edit Waveform
+	    11.	Edit Waveform
+	    12.	Edit Waveform
+	    13.	Edit Waveform
+	    14.	Edit Waveform
+	    15.	Edit Waveform
+	    16.	Edit Waveform
+	    17.	Edit Waveform
+	    18.	End Time
+	    19.	Drop Node
+			 *** 
+	    20.	Insert Node or Bus
+	    21.	Grid Size
+	    22.	End Time
+
+

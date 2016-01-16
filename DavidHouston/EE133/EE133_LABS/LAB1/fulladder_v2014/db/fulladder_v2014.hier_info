@@ -1,0 +1,14 @@
+|fulladder_v2014
+A => U1.IN0
+A => U3.IN0
+A => U5.IN0
+B => U1.IN1
+B => U3.IN1
+B => U4.IN0
+Cin => U2.IN0
+Cin => U4.IN1
+Cin => U5.IN1
+Sum <= U2.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= U6.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,7 @@
+negate a value
+
+to negate D
+
+negb
+adca #0
+nega

@@ -1,0 +1,4 @@
+Circuit: * S:\My Documents\DavidHouston\EE 225\Lab 4\Draft6.asc
+
+Fatal Error: Unknown subcircuit called in:
+   xu1 n003 n004 vout opamp aol=100k gbw=10meg

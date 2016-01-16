@@ -1,0 +1,9 @@
+|LAB5ADDER
+inA => u1.IN0
+inB => u1.IN1
+inB => u2.IN0
+inC => u2.IN1
+out1 <= u4.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= u5.DB_MAX_OUTPUT_PORT_TYPE
+
+

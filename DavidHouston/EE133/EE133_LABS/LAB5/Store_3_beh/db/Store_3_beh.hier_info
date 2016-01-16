@@ -1,0 +1,26 @@
+|Store_3_beh
+D => D.IN3
+Clk => Clk.IN2
+Q1 <= D_latch_Beh:lat.port2
+Q2 <= D_FF_Beh:pos.port2
+Q3 <= D_FF_Beh:neg.port2
+
+
+|Store_3_beh|D_latch_Beh:lat
+D => Q$latch.DATAIN
+Clk => Q$latch.LATCH_ENABLE
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Store_3_beh|D_FF_Beh:pos
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Store_3_beh|D_FF_Beh:neg
+D => Q~reg0.DATAIN
+Clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

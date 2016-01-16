@@ -1,0 +1,161 @@
+|mux_4bit_4_1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+C[3] => C[3].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+SEL1 => SEL1.IN4
+SEL2 => SEL2.IN4
+M[0] <= mux_4_1:m4.port6
+M[1] <= mux_4_1:m3.port6
+M[2] <= mux_4_1:m2.port6
+M[3] <= mux_4_1:m1.port6
+
+
+|mux_4bit_4_1|mux_4_1:m1
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+SEL1 => SEL1.IN2
+SEL2 => SEL2.IN1
+Y <= mux_2_1:m2.port3
+
+
+|mux_4bit_4_1|mux_4_1:m1|mux_2_1:m11
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m1|mux_2_1:m12
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m1|mux_2_1:m2
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m2
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+SEL1 => SEL1.IN2
+SEL2 => SEL2.IN1
+Y <= mux_2_1:m2.port3
+
+
+|mux_4bit_4_1|mux_4_1:m2|mux_2_1:m11
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m2|mux_2_1:m12
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m2|mux_2_1:m2
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m3
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+SEL1 => SEL1.IN2
+SEL2 => SEL2.IN1
+Y <= mux_2_1:m2.port3
+
+
+|mux_4bit_4_1|mux_4_1:m3|mux_2_1:m11
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m3|mux_2_1:m12
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m3|mux_2_1:m2
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m4
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => D.IN1
+SEL1 => SEL1.IN2
+SEL2 => SEL2.IN1
+Y <= mux_2_1:m2.port3
+
+
+|mux_4bit_4_1|mux_4_1:m4|mux_2_1:m11
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m4|mux_2_1:m12
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux_4bit_4_1|mux_4_1:m4|mux_2_1:m2
+A => a1.IN0
+B => a2.IN0
+SEL => n1.IN0
+SEL => a2.IN1
+X <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,23 @@
+|hw_4_1
+data[0] => areg~7.DATAB
+data[1] => areg~6.DATAB
+data[2] => areg~5.DATAB
+data[3] => areg~4.DATAB
+load => areg~4.OUTPUTSELECT
+load => areg~5.OUTPUTSELECT
+load => areg~6.OUTPUTSELECT
+load => areg~7.OUTPUTSELECT
+clear => areg[3]~reg0.ACLR
+clear => areg[2]~reg0.ACLR
+clear => areg[1]~reg0.ACLR
+clear => areg[0]~reg0.ACLR
+clock => areg[3]~reg0.CLK
+clock => areg[2]~reg0.CLK
+clock => areg[1]~reg0.CLK
+clock => areg[0]~reg0.CLK
+areg[3] <= areg[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+areg[2] <= areg[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+areg[1] <= areg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+areg[0] <= areg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

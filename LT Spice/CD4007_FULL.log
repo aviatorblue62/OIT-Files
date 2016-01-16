@@ -1,0 +1,4 @@
+Circuit: * S:\My Documents\CD4007_FULL.asc
+
+Fatal Error: Unknown subcircuit called in:
+   xu1 n003 n004 n006 n005 n011 n005 n009 n013 n012 n010 n008 n007 vout vdd

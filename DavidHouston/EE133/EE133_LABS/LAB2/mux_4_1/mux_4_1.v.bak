@@ -1,0 +1,16 @@
+// <Mux 4_1>
+
+module mux_4_1 (A,B,C,D,SEL,Y);
+
+input A,B,C,D;
+input wire [1:0]SEL;
+output Y;
+
+wire X[1:0];
+
+mux_2_1 m11 (A,B,SEL[0],X[0]);
+mux_2_1 m12 (C,D,SEL[0],X[1]);
+
+mux_2_1 m2 (X[0],X[1],SEL[1],Y);
+
+endmodule

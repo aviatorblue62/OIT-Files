@@ -1,0 +1,4 @@
+Circuit: * S:\My Documents\CD4007_MODEL.asc
+
+Fatal Error: Unknown subcircuit called in:
+   xcd4007 n001 n004 n007 n008 n011 n003 n013 n014 n012 n010 n009 n006 n005 n002

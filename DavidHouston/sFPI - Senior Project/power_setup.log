@@ -1,0 +1,11 @@
+Circuit: * S:\My Documents\DavidHouston\FPSi Senior Project\power_setup.asc
+
+Error on line 3 : d§u1 n002 n004 qnscr b520c
+	 Unable to find definition of model "qnscr"
+	
+	*  Unknown parameter "b520c"
+Error on line 4 : w1 n001 n002 csw
+	 Unable to find definition of model ""
+Error on line 6 : d1 n004 n003 bzx84c10l
+	 Unable to find definition of model "bzx84c10l"
+Fatal Error: W1: Unknown controlling source Csw

@@ -1,0 +1,23 @@
+|step_motor
+rst => count[0].ACLR
+rst => count[1].ACLR
+rst => count[2].ACLR
+rst => count[3].ACLR
+sen => count~20.OUTPUTSELECT
+sen => count~21.OUTPUTSELECT
+sen => count~22.OUTPUTSELECT
+sen => count~23.OUTPUTSELECT
+up => always0~0.IN0
+up => always0~3.IN1
+dn => always0~1.IN1
+dn => always0~2.IN0
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+Q[0] <= Q~3.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q~2.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q~1.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

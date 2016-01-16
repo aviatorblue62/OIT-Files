@@ -1,0 +1,58 @@
+// OSLO 6.6 13891     0 50466
+LEN NEW "sFPI w/ aux-lens" 224.83 9
+EBR  2.0
+ANG  0.0000572957795
+DES  "OSLO"
+UNI  1.0
+// SRF 0
+AIR 
+TH   1.0e+20
+AP  9.9999999977e+13
+NXT  // SRF 1
+GLA BK7       
+RD   80.0
+TH   10.0
+AP  12.5
+NXT  // SRF 2
+AIR 
+RD   -80.0
+TH   15.0
+PK  AP  -1
+NXT  // SRF 3
+GLA BK7       
+TH   5.0
+AP  7.5
+NXT  // SRF 4
+RFH 
+RD   40.0
+TH   0.1
+PK  AP  -1
+TIR YES
+NXT  // SRF 5
+AIR 
+RD   40.0
+TH   39.9
+AP  7.5
+NXT  // SRF 6
+RFH 
+TCE  71.0
+RD   -40.0
+TH   0.1
+AP  7.5
+NXT  // SRF 7
+PK  GLA  -4
+RD   -40.0
+TH   4.9
+AP  7.5
+NXT  // SRF 8
+AIR 
+PK  AP  -5
+NXT  // SRF 9
+AIR 
+TH   27.7683483517052
+PK  AP  -6
+DRW ON
+WV 0.58756 0.633 0.48613 0.65627
+WW 1.0 1.0 1.0 1.0
+END  9
+DLRS 3

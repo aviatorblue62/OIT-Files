@@ -1,0 +1,494 @@
+Simulator report for BCD_ADDER_TOP
+Tue Apr 29 10:14:10 2014
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 237 nodes    ;
+; Simulation Coverage         ;      49.37 % ;
+; Total Number of Transitions ; 1053         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX7000S     ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      49.37 % ;
+; Total nodes checked                                 ; 237          ;
+; Total output ports checked                          ; 237          ;
+; Total output ports with complete 1/0-value coverage ; 117          ;
+; Total output ports with no 1/0-value coverage       ; 97           ;
+; Total output ports with no 1-value coverage         ; 113          ;
+; Total output ports with no 0-value coverage         ; 104          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                      ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                     ; Output Port Name                                                                              ; Output Port Type ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |BCD_ADDER_TOP|a[0]                                                                           ; |BCD_ADDER_TOP|a[0]                                                                           ; out              ;
+; |BCD_ADDER_TOP|a[1]                                                                           ; |BCD_ADDER_TOP|a[1]                                                                           ; out              ;
+; |BCD_ADDER_TOP|a[2]                                                                           ; |BCD_ADDER_TOP|a[2]                                                                           ; out              ;
+; |BCD_ADDER_TOP|b[0]                                                                           ; |BCD_ADDER_TOP|b[0]                                                                           ; out              ;
+; |BCD_ADDER_TOP|b[1]                                                                           ; |BCD_ADDER_TOP|b[1]                                                                           ; out              ;
+; |BCD_ADDER_TOP|b[2]                                                                           ; |BCD_ADDER_TOP|b[2]                                                                           ; out              ;
+; |BCD_ADDER_TOP|seg1[0]                                                                        ; |BCD_ADDER_TOP|seg1[0]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg1[1]                                                                        ; |BCD_ADDER_TOP|seg1[1]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg1[2]                                                                        ; |BCD_ADDER_TOP|seg1[2]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg1[3]                                                                        ; |BCD_ADDER_TOP|seg1[3]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg1[4]                                                                        ; |BCD_ADDER_TOP|seg1[4]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg1[5]                                                                        ; |BCD_ADDER_TOP|seg1[5]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg1[6]                                                                        ; |BCD_ADDER_TOP|seg1[6]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~0                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~0                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~1                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~1                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~2                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~2                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~3                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~3                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~4                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~4                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~5                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~5                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[0]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[0]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~7                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~7                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~8                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~8                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~9                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~9                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~10                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~10                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~11                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~11                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[1]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[1]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~13                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~13                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~14                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~14                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[2]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[2]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~16                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~16                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~17                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~17                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~18                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~18                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~19                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~19                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~20                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~20                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[3]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[3]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[4]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[4]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~23                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~23                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~24                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~24                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~25                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~25                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~26                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~26                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~27                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~27                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[5]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[5]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~29                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~29                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~30                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~30                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~31                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~31                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~33                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~33                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~34                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~34                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~36                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~36                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~37                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~37                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~38                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~38                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~40                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~40                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~42                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg~42                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[6]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u1|seg[6]                                                          ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|Sum[3]                                                              ; |BCD_ADDER_TOP|bcdadd:add|Sum[3]                                                              ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|Sum[2]                                                              ; |BCD_ADDER_TOP|bcdadd:add|Sum[2]                                                              ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|Sum[1]                                                              ; |BCD_ADDER_TOP|bcdadd:add|Sum[1]                                                              ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|LessThan0~0                                                         ; |BCD_ADDER_TOP|bcdadd:add|LessThan0~0                                                         ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|LessThan0~1                                                         ; |BCD_ADDER_TOP|bcdadd:add|LessThan0~1                                                         ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|LessThan0~2                                                         ; |BCD_ADDER_TOP|bcdadd:add|LessThan0~2                                                         ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|LessThan0~3                                                         ; |BCD_ADDER_TOP|bcdadd:add|LessThan0~3                                                         ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[2]~2             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[2]~2             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[2]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[2]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[3]~3             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[3]~3             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[3]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[3]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3                  ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3                  ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]~0             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]~0             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]~1             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]~1             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[1]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[1]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[2]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[2]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~1                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~1                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~2                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~2                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]~1 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]~1 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[3]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[3]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[2]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[2]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[1]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[1]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[0]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[0]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[0]~0             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[0]~0             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[0]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[0]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[1]~1             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[1]~1             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[1]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[1]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[2]~2             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[2]~2             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[2]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[2]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|g3                  ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|g3                  ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~0                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~0                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|g4~0                ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|g4~0                ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[1]~0             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[1]~0             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[2]~1             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[2]~1             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[1]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[1]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[2]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[2]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~1                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~1                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~2                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~2                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~3                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~3                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[2]~1 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[2]~1 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[2]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[2]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[3]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[3]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; out0             ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                         ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                     ; Output Port Name                                                                              ; Output Port Type ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |BCD_ADDER_TOP|seg2[0]                                                                        ; |BCD_ADDER_TOP|seg2[0]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[1]                                                                        ; |BCD_ADDER_TOP|seg2[1]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[2]                                                                        ; |BCD_ADDER_TOP|seg2[2]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[3]                                                                        ; |BCD_ADDER_TOP|seg2[3]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[4]                                                                        ; |BCD_ADDER_TOP|seg2[4]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[5]                                                                        ; |BCD_ADDER_TOP|seg2[5]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[6]                                                                        ; |BCD_ADDER_TOP|seg2[6]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~0                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~0                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~1                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~1                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~2                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~2                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~3                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~3                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~4                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~4                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~5                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~5                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[0]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[0]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~7                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~7                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~8                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~8                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~9                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~9                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~10                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~10                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~11                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~11                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[1]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[1]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~13                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~13                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[2]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[2]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~16                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~16                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~17                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~17                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~18                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~18                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~19                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~19                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~20                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~20                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[3]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[3]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[4]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[4]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~23                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~23                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~24                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~24                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~25                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~25                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~26                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~26                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~27                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~27                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[5]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[5]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~29                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~29                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~30                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~30                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~31                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~31                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~33                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~33                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~34                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~34                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~36                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~36                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~37                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~37                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~38                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~38                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~40                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~40                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~42                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~42                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[6]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[6]                                                          ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|Cout[3]                                                             ; |BCD_ADDER_TOP|bcdadd:add|Cout[3]                                                             ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|Cout[2]                                                             ; |BCD_ADDER_TOP|bcdadd:add|Cout[2]                                                             ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|Cout[1]                                                             ; |BCD_ADDER_TOP|bcdadd:add|Cout[1]                                                             ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[6]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[6]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[1]~1             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[1]~1             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[1]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[1]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[6]~6             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[6]~6             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[6]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[6]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[6]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[6]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[5]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[5]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~0                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~0                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g4~0                ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g4~0                ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[1]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[1]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]~0            ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]~0            ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]~1   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]~1   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~6                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~6                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]~4 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]~4 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[4]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[4]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[3]~3             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[3]~3             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[4]~4             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[4]~4             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[4]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[4]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[4]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[4]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[3]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[3]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|g3~0                ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|g3~0                ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~4                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~4                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; out0             ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                         ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                     ; Output Port Name                                                                              ; Output Port Type ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+; |BCD_ADDER_TOP|a[3]                                                                           ; |BCD_ADDER_TOP|a[3]                                                                           ; out              ;
+; |BCD_ADDER_TOP|b[3]                                                                           ; |BCD_ADDER_TOP|b[3]                                                                           ; out              ;
+; |BCD_ADDER_TOP|seg2[1]                                                                        ; |BCD_ADDER_TOP|seg2[1]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[2]                                                                        ; |BCD_ADDER_TOP|seg2[2]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|seg2[6]                                                                        ; |BCD_ADDER_TOP|seg2[6]                                                                        ; pin_out          ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~0                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~0                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~1                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~1                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~2                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~2                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~3                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~3                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~4                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~4                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~7                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~7                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~8                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~8                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~9                                                           ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~9                                                           ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~10                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~10                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[1]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[1]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~13                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~13                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~14                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~14                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[2]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[2]                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~16                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~16                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~19                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~19                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~23                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~23                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~24                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~24                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~25                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~25                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~26                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~26                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~29                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~29                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~30                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~30                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~31                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~31                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~33                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~33                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~34                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~34                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~36                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~36                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~37                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~37                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~38                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~38                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~40                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~40                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~42                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg~42                                                          ; out0             ;
+; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[6]                                                          ; |BCD_ADDER_TOP|BCD_to_7SEG:u2|seg[6]                                                          ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|Cout[3]                                                             ; |BCD_ADDER_TOP|bcdadd:add|Cout[3]                                                             ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|Cout[2]                                                             ; |BCD_ADDER_TOP|bcdadd:add|Cout[2]                                                             ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|Cout[1]                                                             ; |BCD_ADDER_TOP|bcdadd:add|Cout[1]                                                             ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|Cout[0]                                                             ; |BCD_ADDER_TOP|bcdadd:add|Cout[0]                                                             ; out              ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[6]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[6]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[1]~1             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[1]~1             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[1]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[1]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[6]~6             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[6]~6             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[6]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[6]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[6]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[6]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[5]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[5]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~0                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~0                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g4~0                ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g4~0                ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[1]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[1]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]~0            ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]~0            ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g2c[1]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]~1   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]~1   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[5]     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~6                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~6                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]~4 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]~4 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]   ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[6]   ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[4]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[4]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[3]       ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[3]       ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[3]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[3]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[3]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[3]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[4]~4             ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[4]~4             ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[4]              ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[4]              ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[4]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[4]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[1]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[1]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[2]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[2]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[3]               ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[3]               ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~4                 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~4                 ; out0             ;
+; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; |BCD_ADDER_TOP|bcdadd:add|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; out0             ;
++-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Tue Apr 29 10:14:09 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off BCD_ADDER_TOP -c BCD_ADDER_TOP
+Info: Using vector source file "S:/My Documents/DavidHouston/EE133/EE133_LABS/LAB4/BCD_ADDER_TOP/BCD_ADDER_TOP.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      49.37 %
+Info: Number of transitions in simulation is 1053
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 130 megabytes
+    Info: Processing ended: Tue Apr 29 10:14:10 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

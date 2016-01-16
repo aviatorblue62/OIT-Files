@@ -1,0 +1,106 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+33
+1921
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+|my documents|davidhouston|ee131labs|lab8|add_1bit|
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|decoder2_4|
+|my documents|davidhouston|ee131labs|lab7|alu_4bit|and_4bit|
+|my documents|davidhouston|ee131labs|lab8|add_4bit|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SUB_4BIT
+# storage
+db|SUB_4BIT.(0).cnf
+db|SUB_4BIT.(0).cnf
+# case_insensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|add_4bit|sub_4bit.bdf
+3697a9c43fd63e7bf78fb95a3d76b6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ADD_4BIT
+# storage
+db|SUB_4BIT.(1).cnf
+db|SUB_4BIT.(1).cnf
+# case_insensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|add_1bit|add_4bit.bdf
+e66a49255659af20a249c66bad8e069
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+add_4bit:inst
+}
+# macro_sequence
+
+# end
+# entity
+ADD_1BIT
+# storage
+db|SUB_4BIT.(2).cnf
+db|SUB_4BIT.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+|my documents|davidhouston|ee131labs|lab8|add_1bit|add_1bit.v
+83b2db8dac8c0a1f39cae3d7c166ee9
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+add_4bit:inst|ADD_1BIT:inst20
+add_4bit:inst|ADD_1BIT:inst19
+add_4bit:inst|ADD_1BIT:inst18
+add_4bit:inst|ADD_1BIT:inst
+}
+# macro_sequence
+
+# end
+# complete
+

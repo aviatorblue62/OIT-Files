@@ -1,0 +1,34 @@
+|shift_reg
+D[0] => Q.DATAB
+D[1] => Q.DATAB
+D[2] => Q.DATAB
+D[3] => Q.DATAB
+S_in => Q.DATAA
+S_in => Q.DATAB
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => S_out.OUTPUTSELECT
+l_r => Q.OUTPUTSELECT
+l_r => Q.OUTPUTSELECT
+l_r => Q.OUTPUTSELECT
+l_r => Q.OUTPUTSELECT
+l_r => S_out.OUTPUTSELECT
+clk => S_out~reg0.CLK
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+reset => S_out~reg0.ACLR
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+S_out <= S_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

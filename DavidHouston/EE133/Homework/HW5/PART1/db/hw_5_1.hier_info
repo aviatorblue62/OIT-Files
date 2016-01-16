@@ -1,0 +1,24 @@
+|hw_5_1
+up_dn => count~16.OUTPUTSELECT
+up_dn => count~17.OUTPUTSELECT
+up_dn => count~18.OUTPUTSELECT
+up_dn => count~19.OUTPUTSELECT
+hold => count~21.OUTPUTSELECT
+hold => count~20.OUTPUTSELECT
+hold => count~23.OUTPUTSELECT
+hold => count~22.OUTPUTSELECT
+reset => count[0].ACLR
+reset => count[1].ACLR
+reset => count[2].ACLR
+reset => count[3].ACLR
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+clock => count[3].CLK
+cnt[0] <= cnt~4.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt~3.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt~2.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt~1.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

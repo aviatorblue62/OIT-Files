@@ -1,0 +1,62 @@
+
+             How to Install EmbeddedGNU
+
+1. Install the GNU compiler.
+
+If you have not already installed the GNU gcc compiler
+for the 68hc11/68hc12 MPUs, then you must do this now.
+
+Get the main distribution file from this site:
+  http://www.gnu-m68hc11.org
+
+After downloading the compiler, install the compiler on 
+your computer. I normally install it into the default 
+directory of C:\usr, but you can install it whereever 
+you want. I like to use a short pathname for the 
+install directory, so I don't like to install it under
+C:\Program Files, like most other windows software.
+
+
+2. Install EmbeddedGNU on your computer.
+
+Make sure you extract the directory names when you 
+perform the installation.
+
+Now start EmbeddedGNU.
+
+
+3. Filename Association.
+
+When you first start EmbeddedGNU it will ask if you 
+want to associate the filename extensions used by 
+EmbeddedGNU with itself. This lets you double-click 
+on a filename and the EmbeddedGNU will be launched to 
+let you edit the file. The default option is to 
+associate ".prj" with EmbeddedGNU. This is the main 
+project filetype used by EmbeddedGNU. 
+
+You can also choose to associate .c, .h, and .s files
+with EmbeddedGNU if you want to.
+
+WARNING: if you are on WinNT/Win2K/WinXp, then you must
+be logged in as an administrator to use this option.
+
+Press OK to continue.
+
+
+4. COM Port Selection.
+
+Now it asks if you want to select your COM port. 
+Say Yes.  Pick your port in the dropdown box. It 
+defaults to 9600 baud, which is normally correct.
+
+
+5. Directories
+
+Before you press OK, switch to the Directories tab 
+in this dialog. (If you pressed OK before coming here,
+then select "Options, Environment Options" to return
+here.)
+
+Specify the name of your GCC Bin directory, and the
+full pathname of your make program. Then press OK.

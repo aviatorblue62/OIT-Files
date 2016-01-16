@@ -1,0 +1,8 @@
+|LAB5DATAFLOW2
+OUT_DF <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+IN_B => inst1.IN0
+IN_SEL => inst1.IN1
+IN_SEL => inst4.IN0
+IN_A => inst.IN0
+
+

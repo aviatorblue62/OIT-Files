@@ -1,0 +1,17 @@
+* S:\My Documents\DavidHouston\FPSi Senior Project\Draft1.asc
+VMDAC1 N005 0 PWL file=mdac_data_new.txt
+XU1 0 N001 Vdd1 Vss1 N002 LT1208
+R1 N001 N005 3k tol=1 pwr=0.1
+R2 N002 N001 3k tol=1 pwr=0.1
+R3 N004 0 390
+C1 N004 0 12.21n
+V1 Vdd1 0 33
+V2 0 Vss1 33
+XU2 0 N003 Vdd1 Vss1 N004 LT1208
+R4 N003 N002 3k tol=1 pwr=0.1
+R5 N004 N003 5k tol=1 pwr=0.1
+* Amplifier
+.tran 0 0.1 0
+.lib LTC.lib
+.backanno
+.end

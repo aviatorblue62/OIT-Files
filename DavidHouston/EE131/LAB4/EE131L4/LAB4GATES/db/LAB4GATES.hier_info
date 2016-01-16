@@ -1,0 +1,11 @@
+|LAB4GATES
+A => u1.IN0
+A => u4.IN0
+B => u1.IN1
+B => u2.IN0
+C => u2.IN1
+C => u4.IN1
+X <= u3.DB_MAX_OUTPUT_PORT_TYPE
+Y <= u4.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,19 @@
+|ActiveLowConv
+p => y~4.OUTPUTSELECT
+p => y~5.OUTPUTSELECT
+p => y~6.OUTPUTSELECT
+p => y~7.OUTPUTSELECT
+x[3] => y~3.IN0
+x[3] => y~7.DATAA
+x[2] => y~2.IN0
+x[2] => y~6.DATAA
+x[1] => y~1.IN0
+x[1] => y~5.DATAA
+x[0] => y~0.IN0
+x[0] => y~4.DATAA
+y[0] <= y~7.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y~6.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y~5.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y~4.DB_MAX_OUTPUT_PORT_TYPE
+
+

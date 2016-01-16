@@ -1,0 +1,23 @@
+|bcd_count
+clk => Q[0].CLK
+clk => Q[1].CLK
+clk => Q[2].CLK
+clk => Q[3].CLK
+reset => Q[0].ACLR
+reset => Q[1].ACLR
+reset => Q[2].ACLR
+reset => Q[3].ACLR
+cen => always0.IN0
+updn => Q.OUTPUTSELECT
+updn => Q.OUTPUTSELECT
+updn => Q.OUTPUTSELECT
+updn => Q.OUTPUTSELECT
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+

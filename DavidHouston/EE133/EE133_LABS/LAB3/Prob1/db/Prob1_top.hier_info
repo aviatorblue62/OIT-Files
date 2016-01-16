@@ -1,0 +1,55 @@
+|Prob1_top
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+ena => ena.IN1
+p => p.IN1
+y[0] <= TriStateOut:t1.port2
+y[1] <= TriStateOut:t1.port2
+y[2] <= TriStateOut:t1.port2
+y[3] <= TriStateOut:t1.port2
+
+
+|Prob1_top|Decoder2to4:d1
+a[0] => y.IN1
+a[0] => y.IN0
+a[0] => y.IN1
+a[1] => y.IN0
+a[1] => y.IN1
+a[1] => y.IN0
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Prob1_top|ActiveLowConv:a1
+p => y.OUTPUTSELECT
+p => y.OUTPUTSELECT
+p => y.OUTPUTSELECT
+p => y.OUTPUTSELECT
+x[3] => y.IN0
+x[3] => y.DATAA
+x[2] => y.IN0
+x[2] => y.DATAA
+x[1] => y.IN0
+x[1] => y.DATAA
+x[0] => y.IN0
+x[0] => y.DATAA
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Prob1_top|TriStateOut:t1
+ena => y[3].IN0
+x[0] => y[0].DATAIN
+x[1] => y[1].DATAIN
+x[2] => y[2].DATAIN
+x[3] => y[3].DATAIN
+y[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

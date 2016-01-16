@@ -1,0 +1,126 @@
+EE 401: Communication Systems
+Notes: 04/06/2015
+See spreadsheet for FFT data analysis.
+
+---------------------------------------------------------------------------
+
+@100MHz
+w/ FSR = 20 dB & NF = 2dBf
+Signal (0 dBm) ----> Amplifier (6 dB) ---- Filter (-2dB) ------> Antenna (-1.5 dBm) ------>
+FSL (96.6 + 20log(f)+20log(d)) ------> Antenna (-3 dB) -----> Amplifier (5 dB) ------> Rx
+
+Be able to solve this type of setup and it will be on the EXAM!!!
+
+For FSL it will give us two things:
+1. 37.4 dB/decade (Atennuation)
+2. -59 dBm (1 mile intercept)
+
+---------------------------------------------------------------------------
+
+Nomenclature:
+
+--> 	Lower case variable are usually AC signals
+--> 	Upper case variabls are DC signals
+--> 	Determinisitic vs. Random signals (i.e. a square wave vs. noise)
+--> 	Sinusiodal functions have a standard form (i.e. v(t) = A*sin(2*pi*f*t) and we will be able 	to determine the peak value and consequent values thereof.
+-->	Trigometric Identities
+--> 	To be able to look at a signal and determine what its behavior is.
+
+---------------------------------------------------------------------------
+
+Fourier Analysis:
+
+What people don't know. Fourier was a mentor of one of the guys who disovered and decoded the rosetta stone. 
+
+This analysis dettermines to us what the bandwidth of the signals will be. Consider a signal in the time domain, what would it look like in the frequency domain. 
+
+Ex. 
+	v(t) = 12*cos(2pi(10Hz)t)
+
+We are suposed to get a straight line, however, we errors and aliasing which leads to it being a less than optimal output. 
+
+What he asks grads... If I put signal through a spectrum analyzer I don't get exact value becuase there is noise. This is why it is not perfect. 
+
+If you are working as a test engineer what type of window do you need to get a good measurement of the harmonic. 
+
+If we wanted to determine the bandwidth of our signal, how far out should we go to figure out where most of our signals are out? If we get out past the fifth harmonic the power level is usually very low and makes a good stopping point. 
+
+DC components are impulses at f = 0 Hz. Which in turn relate to a flat line, or a constant, in the time domain.
+
+ ---------------------------------------------------------------------------
+
+Windowing:
+
+Review of DFT, DSP, Window Comparison, in MATLAB
+
+We are taking a snapshot in time of a signal and in turn we a therefore multiplying that signal by a window, which defines the DFT. CTFT of the u(t) window is the SINC function.
+
+Windowing reduces the leakage, which keep out sudon changes in data. It forces it to smooth out to a signal common amplitude. There are different types of windows which accomplish different things. 
+1. Hann
+2. 4-term Blackman-Harris
+3. Kaiser-Bessel
+4. 7-term Blackman-Harris
+(as seen on the PPT)
+
+If we wanted to measure the fifth harmonic of the signal, I would want to use the 7-term Blackman-Harris because it is the tightess to the greatest SNR. 
+
+_______________________________________________________
+			#
+		           #* #
+		       *#	    # *
+A		   *   #         #  *
+		 *    #           #   *
+ 		*    #             #    *      *         *
+. . . .......................#............#...... *......*........*.......*.........*.................
+
+_______________________________________________________
+				frequency
+
+When using the rectangle window we would get a very sharp signal (#) where as when we use the 7-term Blackman-Harris (*) then you get the above plot.
+
+See PPT for Window Selection Application
+
+ ---------------------------------------------------------------------------
+
+ Introduction to Spectral Analysis:
+
+Look at the FSH3TV Overview (PPT)
+
+Spectrum Analyzer, when we turn it on, we will just see noise, becuase we are not looking at anything. 
+
+The difference between the min and the max is called the span. Some will have you enter the min and max frequency. A lot will have you enter a center frequency and a span/2 for the bandwidth. Basically, you will have to enter in some form of the bandwidth with frequency specifications. 
+
+This is for:
+	- Focusing on the signal
+	- Analyze the signal
+	- Harmonics
+
+If I had a 5 MHz signal then I would want a span of 3 MHz so I could see everything. 
+
+Might see an analyzer with the button FREQ.
+
+Y axis is going to be the amplitude. Some analyzers will have a dial that will let you roll through frequencies.
+
+All analyzers have a screen and have buttons, some come as a card to computer setup. They have an RF Input and possible a trigger/reference input. Some instruments will have an output for measuring antenna's. In order to measure these it has to send a signal and then measure that signal. 
+
+Reference level is the reference power level and cause an auto attenuation. 
+
+Lab, what is a high powered signal, and possbly adding some additional attenutaion. However, our signals are going to be tiny. 
+
+RBW stands for recieve bandwidth. Do it in the Lab. It is one of the most important settings in our measurements for a spectrum analyzer. Another one is something called video bandwidth (VDW).
+
+When you turn on a analyzer you see the noise floor, which is a function of temperature and a 
+function of bandwidth. This RBW is the bandwidht of the signal that the reciever is giving itself. 
+
+If measured at 150 dB, at room temperature this is the bandwidth at which it is at. KTB is thermal noise, it is boltzmann's constant times the temperature times the bandwidth. In order to change the noise you would have to either change the temperature of change the enviornment or change the bandwidth. 
+
+Noise = KTB + Nf
+
+Dynamic Range, it will be a big number (i.e. 80 dB)
+It means what is the delta that I can measure on this analyzer at one time. 
+
+
+   
+
+
+

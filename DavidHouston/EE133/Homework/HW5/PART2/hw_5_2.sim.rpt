@@ -1,0 +1,209 @@
+Simulator report for hw_5_2
+Mon May 26 17:13:01 2014
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.1 us       ;
+; Simulation Netlist Size     ; 42 nodes     ;
+; Simulation Coverage         ;      83.33 % ;
+; Total Number of Transitions ; 194          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX7000S     ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                             ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Option                                                                                     ; Setting           ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Simulation mode                                                                            ; Functional        ; Timing        ;
+; Start time                                                                                 ; 0 ns              ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF              ;               ;
+; Vector input source                                                                        ; hw_5_2_s1_set.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                ; On            ;
+; Check outputs                                                                              ; Off               ; Off           ;
+; Report simulation coverage                                                                 ; On                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                ; On            ;
+; Detect setup and hold time violations                                                      ; Off               ; Off           ;
+; Detect glitches                                                                            ; Off               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off               ; Off           ;
+; Generate Signal Activity File                                                              ; Off               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off               ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto              ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      83.33 % ;
+; Total nodes checked                                 ; 42           ;
+; Total output ports checked                          ; 42           ;
+; Total output ports with complete 1/0-value coverage ; 35           ;
+; Total output ports with no 1/0-value coverage       ; 6            ;
+; Total output ports with no 1-value coverage         ; 7            ;
+; Total output ports with no 0-value coverage         ; 6            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                        ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; |hw_5_2|Q[0]~reg0                                              ; |hw_5_2|Q[0]~reg0                                              ; regout           ;
+; |hw_5_2|WideOr0                                                ; |hw_5_2|WideOr0                                                ; out0             ;
+; |hw_5_2|Q[2]~reg0                                              ; |hw_5_2|Q[2]~reg0                                              ; regout           ;
+; |hw_5_2|Q[1]~reg0                                              ; |hw_5_2|Q[1]~reg0                                              ; regout           ;
+; |hw_5_2|set                                                    ; |hw_5_2|set                                                    ; out              ;
+; |hw_5_2|clk                                                    ; |hw_5_2|clk                                                    ; out              ;
+; |hw_5_2|Q[0]                                                   ; |hw_5_2|Q[0]                                                   ; pin_out          ;
+; |hw_5_2|Q[1]                                                   ; |hw_5_2|Q[1]                                                   ; pin_out          ;
+; |hw_5_2|Q[2]                                                   ; |hw_5_2|Q[2]                                                   ; pin_out          ;
+; |hw_5_2|Decoder0~0                                             ; |hw_5_2|Decoder0~0                                             ; out0             ;
+; |hw_5_2|Decoder0~1                                             ; |hw_5_2|Decoder0~1                                             ; out0             ;
+; |hw_5_2|Decoder0~2                                             ; |hw_5_2|Decoder0~2                                             ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|sel_node[2]                               ; |hw_5_2|lpm_mux:Mux0|sel_node[2]                               ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|_~0           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|_~0           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node~0 ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node~0 ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node   ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node   ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~0           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~0           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~2           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~2           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~3           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~3           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node~0 ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node~0 ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~6           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~6           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~7           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~7           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node~1 ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node~1 ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~0           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~0           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~1           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~1           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~2           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~2           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~3           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~3           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~4           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~4           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|result_node~0 ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|result_node~0 ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~5           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~5           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~6           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~6           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~7           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~7           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~8           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|_~8           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|result_node~1 ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|result_node~1 ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|result_node   ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00012|result_node   ; out0             ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                           ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; |hw_5_2|clr                                                    ; |hw_5_2|clr                                                    ; out              ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node~1 ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node~1 ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~1           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~1           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~4           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~4           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~5           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~5           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~8           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~8           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node   ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node   ; out0             ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                           ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; Node Name                                                      ; Output Port Name                                               ; Output Port Type ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node~1 ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00016|result_node~1 ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~1           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~1           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~4           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~4           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~5           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~5           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~8           ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|_~8           ; out0             ;
+; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node   ; |hw_5_2|lpm_mux:Mux0|muxlut:$00010|muxlut:$00014|result_node   ; out0             ;
++----------------------------------------------------------------+----------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Mon May 26 17:13:01 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off hw_5_2 -c hw_5_2
+Info: Using vector source file "S:/My Documents/DavidHouston/EE133/Homework/HW5/PART2/hw_5_2_s1_set.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      83.33 %
+Info: Number of transitions in simulation is 194
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 129 megabytes
+    Info: Processing ended: Mon May 26 17:13:01 2014
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

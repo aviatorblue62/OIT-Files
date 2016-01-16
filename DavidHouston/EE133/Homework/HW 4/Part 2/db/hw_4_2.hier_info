@@ -1,0 +1,35 @@
+|hw_4_2
+data[0] => cnt~19.DATAB
+data[1] => cnt~18.DATAB
+data[2] => cnt~17.DATAB
+data[3] => cnt~16.DATAB
+clock => cnt[0]~reg0.CLK
+clock => cnt[1]~reg0.CLK
+clock => cnt[2]~reg0.CLK
+clock => cnt[3]~reg0.CLK
+clear => cnt~20.OUTPUTSELECT
+clear => cnt~21.OUTPUTSELECT
+clear => cnt~22.OUTPUTSELECT
+clear => cnt~23.OUTPUTSELECT
+load => cnt~16.OUTPUTSELECT
+load => cnt~17.OUTPUTSELECT
+load => cnt~18.OUTPUTSELECT
+load => cnt~19.OUTPUTSELECT
+count_on => cnt~12.OUTPUTSELECT
+count_on => cnt~13.OUTPUTSELECT
+count_on => cnt~14.OUTPUTSELECT
+count_on => cnt~15.OUTPUTSELECT
+up => cnt~8.OUTPUTSELECT
+up => cnt~9.OUTPUTSELECT
+up => cnt~10.OUTPUTSELECT
+up => cnt~11.OUTPUTSELECT
+down => cnt~4.OUTPUTSELECT
+down => cnt~5.OUTPUTSELECT
+down => cnt~6.OUTPUTSELECT
+down => cnt~7.OUTPUTSELECT
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
